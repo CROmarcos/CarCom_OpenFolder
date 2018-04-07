@@ -1,0 +1,73 @@
+﻿@model CarCommercial.Models.Oglas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>Oglas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OglasID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OglasID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NaslovOglasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NaslovOglasa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisOglasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisOglasa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoklopacMotora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoklopacMotora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vrata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vrata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZadnjeStaklo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZadnjeStaklo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Krov)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Krov)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Povratak", "MojiOglasi")
+</p>

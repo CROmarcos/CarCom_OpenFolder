@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CarCommercial.Models.Rezervacija>
+
+@{
+    ViewBag.Title = "MojeRezervacijeVlasnik";
+}
+
+<h2>Moje rezervacije</h2>
+<p>
+    @Html.ActionLink("Napravi novu rezervaciju", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivAuta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaslovOglasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojDana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agencija)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Iznos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Datum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zahtjevi)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazivAuta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NaslovOglasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojDana)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agencija)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zahtjevi)
+            </td>
+            <td>
+                @Html.ActionLink("Prikaži račun", "NapraviIzvjestaj", new { id = item.RezervacijaID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <p><input class="btn btn-link" value="Povratak" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "VlasnikAutas") + "'");" /></p>
+</div>

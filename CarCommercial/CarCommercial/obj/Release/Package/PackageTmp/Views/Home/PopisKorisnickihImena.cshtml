@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "PopisKorisnickihImena";
+}
+
+<h2>Popis zauzetih korisničkih imena</h2>
+
+<div class="row">
+    <fieldset class="col-md-6">
+        <h4>Vlasnici</h4>
+        @ViewBag.Vlasnici
+    </fieldset>
+    <fieldset class="col-md-6">
+        <h4>Agencije</h4>
+        @ViewBag.Agencije
+    </fieldset>
+</div>
+
+<div>
+    <input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");" />
+</div>

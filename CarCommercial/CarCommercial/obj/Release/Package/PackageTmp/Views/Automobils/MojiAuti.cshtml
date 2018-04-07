@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CarCommercial.Models.Automobil>
+
+@{
+    ViewBag.Title = "MojiAuti";
+}
+
+<h2>MojiAuti</h2>
+
+<p>
+    @Html.ActionLink("Unesi novi automobil", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AutomobilID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Registracija)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutomobilID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Registracija)
+        </td>
+        <td>
+            @Html.ActionLink("Detalji", "Details", new { id=item.AutomobilID }) |
+            @Html.ActionLink("Uredi auto", "Edit", new { id = item.AutomobilID }) |
+            @Html.ActionLink("Obriši auto", "Delete", new { id=item.AutomobilID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "VlasnikAutas") + "'");" /></p>
+</div>

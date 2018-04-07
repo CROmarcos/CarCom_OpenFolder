@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CarCommercial.Models.Oglas>
+
+@{
+    ViewBag.Title = "MojiOglasi";
+}
+
+<h2>MojiOglasi</h2>
+
+<p>
+    @Html.ActionLink("Unesi novi oglas", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OglasID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaslovOglasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisOglasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoklopacMotora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vrata)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZadnjeStaklo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Krov)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OglasID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaslovOglasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisOglasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoklopacMotora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vrata)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZadnjeStaklo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Krov)
+        </td>
+        <td>
+            @Html.ActionLink("Detalji", "Details", new { id=item.OglasID }) |
+            @Html.ActionLink("Uredi oglas", "Edit", new { id = item.OglasID }) |
+            @Html.ActionLink("Obriši oglas", "Delete", new { id=item.OglasID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    <p><input class="btn btn-link" value="Povratak" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "OglasivackaAgencijas") + "'");" /></p>
+</div>

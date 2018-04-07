@@ -1,0 +1,93 @@
+﻿@model CarCommercial.Models.Rezervacija
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Izrada rezervacije</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Rezervacija</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NazivAuta, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.AutomobilID, ViewBag.PopisAuta as List<SelectListItem>)
+                @Html.ValidationMessageFor(model => model.AutomobilID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NaslovOglasa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OglasID, ViewBag.PopisOglasa as List<SelectListItem>)
+                @Html.ValidationMessageFor(model => model.OglasID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BrojDana, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BrojDana, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BrojDana, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <h4>Označite gdje planirate staviti reklamu</h4>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PoklopacMotora, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.PoklopacMotora)
+                    @Html.ValidationMessageFor(model => model.PoklopacMotora, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Vrata, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Vrata)
+                    @Html.ValidationMessageFor(model => model.Vrata, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ZadnjeStaklo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.ZadnjeStaklo)
+                    @Html.ValidationMessageFor(model => model.ZadnjeStaklo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Krov, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Krov)
+                    @Html.ValidationMessageFor(model => model.Krov, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Napravi rezervaciju" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Odustani", "MojeRezervacijeVlasnik")
+</div>

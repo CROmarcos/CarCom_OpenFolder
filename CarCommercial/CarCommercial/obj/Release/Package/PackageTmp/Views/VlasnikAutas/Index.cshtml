@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CarCommercial.Models.VlasnikAuta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Popis svih korisnika (Vlasnici vozila)</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KorisnickoIme)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KorisnickoIme)
+        </td>       
+    </tr>
+}
+
+</table>
+
+@if (Session["Status"].ToString() == "vlasnik")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "VlasnikAutas") + "'");" /></p>
+    </div>
+}
+@if (Session["Status"].ToString() == "agencija")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "OglasivackaAgencijas") + "'");" /></p>
+    </div>
+}

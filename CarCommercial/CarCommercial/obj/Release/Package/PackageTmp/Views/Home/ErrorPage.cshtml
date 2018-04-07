@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "ErrorPage";
+}
+
+<h2>Pogreška</h2>
+
+<div class="jumbotron">
+    <p class="lead">Niste ulogirani, nemate pravo pristupa.</p>
+</div>
+
+<div>
+    <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");" /></p>
+</div>

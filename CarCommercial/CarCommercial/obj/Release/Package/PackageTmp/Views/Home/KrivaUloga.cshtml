@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "ErrorPage";
+}
+
+<h2>Pogreška</h2>
+
+<div class="jumbotron">
+    <p class="lead">Nemate pravo pristupa ovoj stranici.</p>
+</div>
+
+@if (Session["Status"].ToString() == "vlasnik")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "VlasnikAutas") + "'");" /></p>
+    </div>
+}
+@if (Session["Status"].ToString() == "agencija")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "OglasivackaAgencijas") + "'");" /></p>
+    </div>
+}

@@ -1,0 +1,82 @@
+﻿@model CarCommercial.Models.OglasivackaAgencija
+
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+<h2>@Html.DisplayFor(model => model.KorisnickoIme)</h2>
+
+<div class="row">
+    <h4>Moj profil</h4>
+    <hr />
+    <div class="col-md-7">
+        <div>
+            
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NazivTvrtke)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NazivTvrtke)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sjediste)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Sjediste)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BrojTelefona)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.BrojTelefona)
+                </dd>
+
+            </dl>
+        </div>
+
+        <div>
+            <p><input class="btn btn-success alert-link" value="Moji oglasi" readonly onclick="@("window.location.href='" + @Url.Action("MojiOglasi", "Oglas") + "'");" /></p>
+        </div>
+
+        <div>
+            <p><input class="btn btn-success alert-link" value="Moje rezervacije" readonly onclick="@("window.location.href='" + @Url.Action("MojeRezervacijeAgencija", "Rezervacijas") + "'");" /></p>
+        </div>
+    </div>
+
+    <div class="col-md-offset-6">
+        <div>
+            <p><input class="btn btn-info alert-link" value="Popis svih vozila" readonly onclick="@("window.location.href='" + @Url.Action("Index", "Automobils") + "'");" /></p>
+        </div>
+
+        <div>
+            <p><input class="btn btn-info alert-link" value="Popis svih oglasa" readonly onclick="@("window.location.href='" + @Url.Action("Index", "Oglas") + "'");" /></p>
+        </div>
+
+        <div>
+            <p><input class="btn btn-info alert-link" value="Popis svih vlasnika vozila" readonly onclick="@("window.location.href='" + @Url.Action("Index", "VlasnikAutas") + "'");" /></p>
+        </div>
+
+        <div>
+            <p><input class="btn btn-info alert-link" value="Popis svih agencija" readonly onclick="@("window.location.href='" + @Url.Action("Index", "OglasivackaAgencijas") + "'");" /></p>
+        </div>
+    </div>
+</div>
+
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OglasivackaAgencijaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

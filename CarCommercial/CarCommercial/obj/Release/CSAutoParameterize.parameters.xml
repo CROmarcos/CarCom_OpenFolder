@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CarCommercialContext-Web.config Connection String" description="CarCommercialContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=CarCommercialContext-20170707143404; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|CarCommercialContext-20170707143404.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Matija\\Projects\\PI\\r17068\\CarCommercial\\CarCommercial\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CarCommercialContext']/@connectionString" />
+  </parameter>
+</parameters>

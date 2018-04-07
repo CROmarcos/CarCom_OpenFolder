@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CarCommercial.Models.Oglas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Popis svih oglasa</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NaslovOglasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisOglasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoklopacMotora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vrata)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZadnjeStaklo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Krov)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Korisnik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaslovOglasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisOglasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoklopacMotora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vrata)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZadnjeStaklo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Krov)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Korisnik)
+        </td>
+        <td>
+            @Html.ActionLink("Detalji", "DetailsOpcenito", new { id=item.OglasID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@if (Session["Status"].ToString() == "vlasnik")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "VlasnikAutas") + "'");" /></p>
+    </div>
+}
+@if (Session["Status"].ToString() == "agencija")
+{
+    <div>
+        <p><input class="btn btn-link" value="Povratak na naslovnicu" readonly onclick="@("window.location.href='" + @Url.Action("LoggedIn", "OglasivackaAgencijas") + "'");" /></p>
+    </div>
+}

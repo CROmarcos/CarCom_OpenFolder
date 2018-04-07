@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Početna";
+}
+
+<div class="jumbotron">
+    <h1>Početna stranica</h1>
+    <p class="lead">CarCommercial je web aplikacija koja omogućava postavljanje oglasa automobilskih reklama, te vozila dostupnih za oglase. Ovdje možete postavljati svoje oglase, ali i automobile na koje želite staviti oglas. Želite li dodatno zaraditi na svojem automobilu, ili se pak brzo i jeftino oglašavati, na pravom ste mjestu.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-offset-2">
+        <fieldset class="col-md-6">
+            <h2>Vlasnici<br />automobila</h2>
+            <div>
+                <p><input class="btn btn-success alert-link" value="Registriraj se" readonly onclick="@("window.location.href='" + @Url.Action("Register", "VlasnikAutas") + "'");" /></p>
+                <p><input class="btn btn-success alert-link" value="Prijavi se" readonly onclick="@("window.location.href='" + @Url.Action("Login", "VlasnikAutas") + "'");" /></p>
+            </div>
+        </fieldset>
+
+        <fieldset class="col-md-5">
+            <h2>Agencije za<br />oglašavanje</h2>
+            <div>
+                <p><input class="btn btn-success alert-link" value="Registriraj se" readonly onclick="@("window.location.href='" + @Url.Action("Register", "OglasivackaAgencijas") + "'");" /></p>
+                <p><input class="btn btn-success alert-link" value="Prijavi se" readonly onclick="@("window.location.href='" + @Url.Action("Login", "OglasivackaAgencijas") + "'");" /></p>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="text-center">
+    <div>
+        <p><input class="btn btn-info alert-link" value="Zauzeta korisnička imena" readonly onclick="@("window.location.href='" + @Url.Action("PopisKorisnickihImena", "Home") + "'");" /></p>
+    </div>
+</div>
