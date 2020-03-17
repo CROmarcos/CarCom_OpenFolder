@@ -193,7 +193,6 @@ C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bi
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.ReportViewer.WebForms.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Newtonsoft.Json.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\System.Web.Helpers.dll
@@ -223,9 +222,9 @@ C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bi
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\bin\Microsoft.AI.Web.xml
-C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.csprojResolveAssemblyReference.cache
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.Migrations.InitialCreate.resources
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.csproj.GenerateResource.Cache
-C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.csproj.CoreCompileInputs.cache
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.dll
 C:\Users\Marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.pdb
+C:\Users\marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.csprojAssemblyReference.cache
+C:\Users\marko\Documents\GitHub\CarCom_OpenFolder\CarCommercial\CarCommercial\obj\Debug\CarCommercial.csproj.CopyComplete
